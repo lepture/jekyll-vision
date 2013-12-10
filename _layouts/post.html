@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{ page.title }} — {{ site.name }}</title>
+  {% include head.html %}
+
+  {% if site.twitter %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }}">
+    {% if page.excerpt %}
+      <meta name="description" content="{{ page.excerpt }}">
+      <meta name="twitter:description" content="{{ page.excerpt }}">
+    {% endif %}
+    <meta name="twitter:site" content="@{{ site.twitter.site }}">
+    <meta name="twitter:creator" content="@{{ site.twitter.creator }}">
+    <meta name="twitter:domain" content="{{ site.twitter.domain }}">
+  {% endif %}
+</head>
+<body>
+  {% include navigation.html %}
+
+  <div id="subheader">
+    <div class="container yue">
+      {% include contact.html %}
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="container yue">
+      <div class="hentry" itemscope itemtype="http://schema.org/Article">
+        <h1 class="entry-title" itemprop="name">{{ page.title }}</h1>
+        {% if page.date %}
+        <div class="entry-meta">
+          <time class="updated" datetime="{{ page.date | date_to_xmlschema}}" itemprop="datePublished" pubdate>
+            {{ page.date | date: '%b %d, %Y' }}
+          </time>
+          <span class="author vcard">
+            <span class="fn" itemprop="author">{{ site.author }}</span>
+          </span>
+        </div>
+        {% endif %}
+        <div class="entry-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+      </div>
+      {% if page.tags %}
+        <div class="entry-tags">
+          {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% include disqus.html %}
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

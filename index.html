@@ -1,0 +1,19 @@
+---
+layout: default
+title: Just lepture
+---
+
+<ul class="entry-list">
+  {% for post in paginator.posts %}
+    <li class="entry-item">
+      <div class="entry-meta">
+        <time class="updated">{{ post.date | date: "%b %d, %Y" }}</time>
+        <em>{{ post.content | number_of_words }} words</em>
+      </div>
+      <div class="detail">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="description">{{ post.excerpt }}</div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

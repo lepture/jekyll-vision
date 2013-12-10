@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{ page.title }} — {{ site.name }}</title>
+  {% include head.html %}
+</head>
+<body>
+  {% include navigation.html %}
+
+  <div id="subheader">
+    <div class="container yue">
+      {% include contact.html %}
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="container yue">
+      {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

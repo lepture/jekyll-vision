@@ -1,0 +1,23 @@
+name: Just lepture
+url: "http://lepture.com"
+author: Hsiaoming Yang
+
+markdown: redcarpet
+pygments: true
+permalink: /:year/:month/:title/
+paginate: 10
+paginate_path: "page/:num/"
+
+links:
+  - name: About
+    url: /about/
+  - name: Feed
+    url: /feed.xml
+
+social:
+  - name: Email
+    url: "mailto:me@lepture.com"
+  - name: Twitter
+    url: "https://twitter.com/lepture"
+  - name: GitHub
+    url: "https://github.com/lepture"
