@@ -9,3 +9,13 @@ Although my blog is not powered by jekyll.
 
 - `google_analytics`
 - `disqus`
+
+## Copyright
+
+This theme is designed by lepture. All rights reserved.
+
+If you want to use this theme, please contact me.
+
+Only these sites can use this theme:
+
+- http://imquyi.com/
