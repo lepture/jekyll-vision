@@ -1,14 +1,22 @@
+{% if site.disqus %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-  function js(u){
-    var d=document,a='script',s=document.createElement(a),f=d.getElementsByTagName(a)[0];s.src=u,s.async=true;f.parentNode.insertBefore(s,f);return s;
-  }
-  {% if site.disqus and page.disqus != False %}
-    var disqus_shortname='{{ site.disqus }}';
-    var disqus_title='{{ page.title }}';
-    (function() {
-      if(location.port)return;
-        js('http://'+disqus_shortname+'.disqus.com/embed.js');
-    })();
-  {% endif %}
+  var disqus_shortname='{{ site.disqus }}';
+  var disqus_title='{{ page.title }}';
+  (function() {
+    if(location.port)return;
+    js('http://'+disqus_shortname+'.disqus.com/embed.js');
+  })();
 </script>
+{% endif %}
+
+{% if site.duoshuo %}
+<div class="ds-thread"></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
+  (function() {
+    if(location.port)return;
+    js('http://static.duoshuo.com/embed.js');
+  })();
+</script>
+{% endif %}
