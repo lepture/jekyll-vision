@@ -3,14 +3,21 @@
  *
  * yue.css is designed for readable content.
  *
- * Copyright (c) 2013 by Hsiaoming Yang.
+ * Copyright (c) 2013 - 2014 by Hsiaoming Yang.
  */
 
 
 
 .yue {
-  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  color: #333332;
+  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #444443;
+}
+.windows .yue {
+  font-size: 16px;
+  font-family: "Georgia", "SimSun", sans-serif;
+}
+.yue ::-moz-selection {
+  background-color: rgba(0,0,0,0.2);
 }
 .yue ::selection {
   background-color: rgba(0,0,0,0.2);
@@ -21,7 +28,7 @@
 .yue h4,
 .yue h5,
 .yue h6 {
-  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "SimSun", sans-serif;
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
 }
 .yue h1 {
@@ -51,14 +58,18 @@
 }
 .yue p {
   margin-top: 0;
-  margin-bottom: 1.64em;
+  margin-bottom: 1.46em;
 }
 .yue a {
   color: #111;
   word-wrap: break-word;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
+  text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 .yue a:hover {
   color: #555;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
+  text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 .yue strong,
 .yue b {
@@ -71,10 +82,13 @@
   color: #222;
 }
 .yue img {
-  display: block;
   max-width: 100%;
   height: auto;
   margin: 0.2em 0;
+}
+.yue a img {
+  /* Remove border on IE */
+  border: none;
 }
 .yue figure {
   position: relative;
@@ -82,11 +96,12 @@
   outline: 0;
   margin: 10px 0 30px;
   padding: 0;
+  min-height: 100px;
 }
 .yue figure img {
   display: block;
   max-width: 100%;
-  margin: auto;
+  margin: auto auto 4px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -116,6 +131,9 @@
   margin: 0 0 1.64em 0;
   border-left: 3px solid #dadada;
   padding-left: 12px;
+  color: #666664;
+}
+.yue blockquote a {
   color: #666664;
 }
 .yue ul,
@@ -163,13 +181,15 @@
   font-family: "Inconsolata", "Menlo", monospace;
 }
 .yue pre {
+  margin: 1.64em 0;
   padding: 7px;
-  border: 1px solid #dadada;
-  border-radius: 4px;
+  border: none;
+  border-left: 3px solid #dadada;
+  padding-left: 10px;
   overflow: auto;
   line-height: 1.5;
   font-size: 0.96em;
-  font-family: "Inconsolata", "Menlo", monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   color: #4c4c4c;
   background-color: #f9f9f7;
 }
@@ -177,10 +197,11 @@
 .yue pre tt {
   color: #4c4c4c;
   border: none;
-  background-color: none;
+  background: none;
   padding: 0;
 }
 .yue table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 1.5em;
@@ -206,11 +227,23 @@
 .yue figure iframe {
   margin: auto;
 }
+.yue table pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
 @media (min-width: 1100px) {
   .yue blockquote {
     margin-left: -24px;
     padding-left: 20px;
     border-width: 4px;
+  }
+  .yue blockquote blockquote {
+    margin-left: 0;
+  }
+  .yue figure img {
+    margin: 0 0 4px;
   }
   .yue figure figcaption:before {
     width: 25%;

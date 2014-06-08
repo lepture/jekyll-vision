@@ -21,7 +21,6 @@ html, body {
   content: "";
   clear: both;
 }
-
 a {
   color: #434344;
   -webkit-transition: all 0.25 ease-in;
@@ -35,11 +34,8 @@ a:hover {
 .yue {
   font-family: "Lora", "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
-.yue p {
-  margin-bottom: 1.4em;
-}
 .yue .cite-quote {
-  font-size: 24px;
+  font-size: 20px;
   text-align: left;
   margin: 20px;
   border: 0;
@@ -47,8 +43,8 @@ a:hover {
 }
 .yue .cite-quote cite {
   display: block;
-  text-align: right;
-  font-size: 20px;
+  text-align: center;
+  font-size: 16px;
   font-style: normal;
   color: #999;
 }
@@ -58,6 +54,10 @@ a:hover {
 .yue .cite-quote cite:before {
   content: '—';
   margin-right: 10px;
+}
+.yue .highlight td:first-of-type pre {
+  text-align: right;
+  color: #aaa;
 }
 
 #header {
@@ -110,7 +110,7 @@ a:hover {
 #main {
   padding: 30px 0;
 }
-#footer .container {
+#footer {
   padding: 10px 0 20px;
   text-align: center;
   border-top: 1px solid #eee;
@@ -168,6 +168,10 @@ a:hover {
   font-size: 14px;
   font-family: "Optima", "Helvetica Neue", sans-serif;
 }
+.hentry .entry-content h2 {
+  margin-top: 2em;
+  border-bottom: 1px solid #eee;
+}
 .hentry .entry-meta .updated:after {
   content: ' — ';
 }
@@ -198,7 +202,16 @@ a:hover {
 .paginator .next:after {
   content: "»";
 }
+.entry-extra {
+  zoom: 1;
+}
+.entry-extra:after {
+  display: table;
+  content: ' ';
+  clear: both;
+}
 .entry-tags {
+  float: left;
   margin-bottom: 20px;
 }
 .entry-tags .tag {
@@ -210,14 +223,13 @@ a:hover {
   content: '#';
   color: #999;
 }
-.twitter-share-button {
-  display: none;
+.social-button {
+  float: right;
 }
-.twttr-rendered .twitter-share-button {
-  display: block;
-}
-#disqus_thread {
-  margin-top: 18px;
+.entry-comments {
+  padding: 30px 0;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
 }
 
 @media (max-width: 650px) {
@@ -242,13 +254,6 @@ a:hover {
   .entry-list .detail {
     margin-left: 0;
   }
-}
-
-.yue pre {
-  border: 0 none;
-  border-left: 3px solid #dadada;
-  padding-left: 10px;
-  border-radius: 0;
 }
 .highlight-wrapper {
   overflow-x: scroll;
@@ -283,6 +288,26 @@ a:hover {
 .gist table td {
   border: 0 none;
 }
+.footnote-ref a {
+  font-size: 13px;
+  padding: 0 2px;
+}
+.footnotes {
+  color: #686869;
+  font-size: 15px;
+}
+.footnotes hr {
+  width: 100%;
+  border-top: 1px solid #dededc;
+  border-bottom: none;
+  margin: 14px 0;
+}
+.footnotes a {
+  color: #686869;
+}
+.footnotes a[rev=footnote] {
+  margin-left: 4px;
+}
 @media (min-width: 980px) {
   .highlight {
     margin: 0 -30px;
@@ -290,5 +315,13 @@ a:hover {
   .yue .cite-quote {
     text-align: center;
     margin: 36px -60px;
+    font-size: 24px;
+  }
+}
+@media print {
+  #header, #subheader, #footer,
+  .entry-extra, .entry-comments,
+  .hentry .entry-meta {
+    display: none;
   }
 }
