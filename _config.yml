@@ -3,7 +3,6 @@ url: "http://lepture.com"
 author: Hsiaoming Yang
 
 markdown: redcarpet
-pygments: true
 permalink: /:year/:month/:title/
 paginate: 10
 paginate_path: "page/:num/"

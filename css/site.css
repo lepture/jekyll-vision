@@ -132,20 +132,9 @@ a:hover {
 }
 
 .entry-list .entry-meta {
-  float: left;
-  width: 120px;
-  text-align: right;
+  color: #999;
   font-size: 14px;
   font-family: "Optima", "Helvetica Neue", sans-serif;
-}
-.entry-list .entry-meta time {
-  display: block;
-}
-.entry-list .entry-meta em {
-  font-size: 13px;
-}
-.entry-list .detail {
-  margin-left: 140px;
 }
 .entry-list h2 {
   margin: 5px 0 8px;
@@ -163,6 +152,7 @@ a:hover {
 }
 .hentry .entry-meta {
   display: block;
+  color: #999;
   margin-bottom: 26px;
   text-align: center;
   font-size: 14px;
