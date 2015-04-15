@@ -1,6 +1,6 @@
 # Just Vision
 
-This is a jekyll theme which looks like my blog [Just lepture][my blog].
+This is a jekyll theme which ~~looks like my blog [Just lepture][my blog]~~.
 Although my blog is not powered by jekyll.
 
 [my blog]: http://lepture.com/
@@ -14,8 +14,7 @@ Although my blog is not powered by jekyll.
 
 This theme is designed by lepture. All rights reserved.
 
-If you want to use this theme, please contact me.
-
-Only these sites can use this theme:
+If you want to use this theme, please fork this repo and add your site below:
 
 - http://imquyi.com/
+- http://blog.lishun.me/
