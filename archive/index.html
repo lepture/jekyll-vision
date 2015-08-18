@@ -14,7 +14,7 @@ title: Archive
   <ul class="entry-list" role="main">
     {% for item in site.posts() %}
     <li class="entry-item {{item.tags|join(' ')}} {{item.date.year}}">
-    <div class="entry-meta"><time>{{ item.date.strftime('%b %d, %Y') }}</time></div>
+    <div class="entry-meta"><time>{{ item.date | date: "%b %d, %Y" }}</time></div>
     <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
     </li>
     {% endfor %}
