@@ -222,6 +222,10 @@ a:hover {
   border-top: 1px solid #ddd;
 }
 
+#disqus_thread {
+  clear: left;
+}
+
 @media (max-width: 650px) {
   #header {
     padding-top: 40px;
