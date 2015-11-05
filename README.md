@@ -18,3 +18,4 @@ If you want to use this theme, please fork this repo and add your site below:
 
 - http://imquyi.com/
 - http://blog.lishun.me/
+- http://duobei.github.io/
