@@ -147,6 +147,43 @@ a:hover {
   font-size: 18px;
 }
 
+.entry-header .container {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee;
+}
+.entry-header .entry-title {
+  margin: 0;
+  padding: .6em 0;
+  font-size: 42px;
+}
+.entry-header .entry-description {
+  color: #787879;
+  font-size: 22px;
+  font-family: "Lucida Grande", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.entry-header .entry-meta {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  font-family: "Optima", "Helvetica Neue", sans-serif;
+}
+.entry-header .entry-meta .button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.entry-header[data-cover]::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .hentry .entry-title {
   text-align: center;
 }
